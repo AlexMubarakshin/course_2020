@@ -18,4 +18,4 @@
 
 ## Содержание
 
-- [Вводная часть](./01_Intro_a_frontend/Lecture.md)
+- [Первое занятие](./01_Intro_a_frontend/Readme.md)
