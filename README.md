@@ -32,9 +32,10 @@
 - [Adobe Color Wheel](https://color.adobe.com/ru/create/color-wheel/?base=2&rule=Analogous&selected=0&name=%D0%9C%D0%BE%D1%8F%20%D1%82%D0%B5%D0%BC%D0%B0%20Color&mode=rgb&rgbvalues=0.959618936717411,1,0.46774994848962836,0.91,0.5650782970237611,0.04550000000000004,1,0,0,0.3970972618702675,0.04550000000000004,0.91,0.050000000000000044,0.7210391593271197,1&swatchOrder=0,1,2,3,4)
 - [Colourcode](https://colourco.de/)
 
-### Прикольные рессурсы для дизайна
+### Прикольные ссылки по дизайну
 
 - [Ресурсы с референсами, о которых вы, надеюсь, раньше не знали, — для веб-дизайнеров и сочувствующих](https://vc.ru/design/94533-resursy-s-referensami-o-kotoryh-vy-nadeyus-ranshe-ne-znali-dlya-veb-dizaynerov-i-sochuvstvuyushchih)
+- [A collection of the best UX and UI practices.](https://www.checklist.design/)
 - [Идеи для дизайна](https://calltoidea.com/)
 - [Идеи для пустых экранов мобильных приложений](https://emptystat.es/)
 - [Лучшие about страницы](http://bestaboutpages.com/)
