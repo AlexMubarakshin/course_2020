@@ -2,6 +2,11 @@
 
 Материалы для курса, а так же полезные ссылки.
 
+## Содержание
+
+- [Первое занятие](./01_Intro_a_frontend/Readme.md)
+- [Второе занятие](./02_HTML_basics/Readme.md)
+
 ## Необходимый стек
 
 `ОС` - любая.
@@ -16,14 +21,18 @@
 
 - И т.д. на ваш выбор 🙂
 
-## Содержание
-
-- [Первое занятие](./01_Intro_a_frontend/Readme.md)
-- [Второе занятие](./02_HTML_basics/Readme.md)
-
 ## Полезные ссылки
 
-### Паллитры
+### Расширения
+
+- [Bug Magnet – Плагин для тестирования](https://chrome.google.com/webstore/detail/bug-magnet/efhedldbjahpgjcneebmbolkalbhckfi)
+- [Githunt – топ проектов из github вместо главной страницы](https://chrome.google.com/webstore/detail/githunt/khpcnaokfebphakjgdgpinmglconplhp)
+- [HTTPS Everywhere – Не позволять сайтам перекидывать вас на HTTPS](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
+- [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi)
+- [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+- [Wappalyzer – Идентифицировать стек сайта](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
+
+### Палитры
 
 - [Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/?utm_source=forwebdev&utm_medium=announcement&utm_campaign=instrument-dlya-podbora-dostupnoy-kontras)
 - [Color Hunt](https://colorhunt.co/)
