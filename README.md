@@ -6,6 +6,7 @@
 
 - [Первое занятие](./01_Intro_a_frontend/Readme.md)
 - [Второе занятие](./02_HTML_basics/Readme.md)
+- [Третье занятие](./03_CSS_basics/Readme.md)
 
 ## Необходимый стек
 
@@ -26,6 +27,10 @@
 ### Развитие
 
 - [Frontend Roadmap](https://roadmap.sh/frontend) – Карта развития frontend разработчика.
+
+### Инструменты
+
+- [The W3C Markup Validation Service](https://validator.w3.org/) – Валидатор HTML верстки
 
 ### Плагины
 
