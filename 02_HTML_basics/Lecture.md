@@ -14,6 +14,10 @@
 
 Они необходимы для того чтобы поисковые системы, читалки и т.п могли понять что находится на странице.
 
+Например, понять где находится меню, хедер и футер.
+
+Так же поисковикам важно, чтобы все элементы страницы отображались благодаря html-тегам, для которых они предназначены.
+
 <p align="center">
   <img src="./lect_images/page-structure.png" alt="Page structure"
        width="60%">
@@ -233,4 +237,61 @@ Eще один важный элемент встречающийся во мн�
 
 ```html
 <img src="super-duper-image.jpg">
+```
+
+## Веб формы
+
+```html
+<form method="post|get">
+```
+
+```html
+<label for="mega-input">Введи что-то</label>
+<input id="mega-input" type="text|number|email|tel|url|password|submit|reset|checkbox|button|radio|file" name="" size="50" maxlength="4" placeholder="" value="">
+```
+
+```html
+<button>Кнопка</button>
+```
+
+```html
+<textarea cols="50" rows="5" placeholder="" readonly disabled>Крутой текст</textarea>
+```
+
+```html
+<select>
+  <opttion>Крутой выбор #1</option>
+  <opttion selected>Крутой выбор #2</option>
+  <opttion>Крутой выбор #3</option>
+
+  <optgroup label="Мега-крутые варианты">
+    <opttion>Super duper #1</option>
+    <opttion>Super duper #2</option>
+  </optgroup>
+</select>
+```
+
+## Таблицы
+
+`<table>` – Таблица
+`<tr>` – Строка (Table Row)
+`<td>` – Ячейка
+`<th>` – Заголовок
+
+```html
+<table border="1" cellspacing="10" cellpadding="10">
+  <tr>
+    <td width="10">Заголовок 1</td>
+    <td>Заголовок 2</td>
+    <td>Заголовок 3</td>
+  </tr>
+  <tr>
+    <td>Первая ячейка</td>
+    <td>Вторая ячейка</td>
+    <td rowspan="2">Третья ячейка</td>
+  </tr>
+  <tr>
+    <td colspan="2">Вторая ячейка</td>
+  </tr>
+</table>
 ```
