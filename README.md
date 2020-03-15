@@ -8,27 +8,20 @@
 - [Второе занятие](./02_HTML_basics/Readme.md)
 - [Третье занятие](./03_CSS_basics/Readme.md)
 
-## Необходимый стек
-
-`ОС` - любая.
-
-`IDE`:
-
-- [VSCode](https://code.visualstudio.com/)
-
-- [Atom](https://ide.atom.io/)
-
-- [Webstorm](https://www.jetbrains.com/ru-ru/webstorm/)
-
-- И т.д. на ваш выбор 🙂
-
 ## Полезные ссылки
 
 ### Развитие
 
 - [Frontend Roadmap](https://roadmap.sh/frontend) – Карта развития frontend разработчика.
+
+#### HTML
+
 - [Секреты использования семантической верстки в HTML5](https://medium.com/@stasonmars/%D1%81%D0%B5%D0%BA%D1%80%D0%B5%D1%82%D1%8B-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D1%81%D0%B5%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B8%CC%86-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B8-%D0%B2-html5-c7cd5e6f1ebb) – Про семантику
 - ✨[Why, How, and When to Use Semantic HTML and ARIA](https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/)
+- ✨[Использование метатега viewport для управления разметкой на мобильных браузерах](https://developer.mozilla.org/ru/docs/Mozilla/Mobile/Viewport_meta_tag)
+
+#### CSS
+
 - ✨[Слова, часто используемые в CSS-классах](https://github.com/yoksel/common-words)
 
 ### Инструменты
