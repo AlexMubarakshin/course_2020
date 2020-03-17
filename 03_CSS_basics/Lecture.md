@@ -8,6 +8,8 @@
 
 ### Inline-стили
 
+Завадавая стили внутри атрибута `style`.
+
 ```html
 <body>
   <div style="color: red">Пацаны и пацанессы, <a href="http://instagram.com/yo.manicure">записываемся на ноготочки</a></div>
@@ -17,6 +19,8 @@
 ```
 
 ### С помощью тега `<style>`
+
+Завадавая стили внутри тега `style`.
 
 ```html
 <head>
@@ -35,14 +39,7 @@
 
 ### Импорт с помощью тега `<link>`
 
-Создать файл `styles.css`.
-
-```css
-  /* styles.css */
-  div {
-    color: red;
-  }
-```
+Так же с помощью тега `link`, указав в атрибуте `href` путь по `.css` файла.
 
 ```html
 <head>
@@ -179,6 +176,8 @@ visibility: hidden;
 
 ## Обтекание, позиционирование и слои
 
+Для определения по какой стороне будет выравнен жлемент, можно использовать свойство `float`.
+
 ```css
 float: right | left | none;
 ```
@@ -202,22 +201,8 @@ overflow-y: hidden;
 overflow: auto | scroll | hidden;
 ```
 
+Для установки способа позиционирования элемента относительно окна браузера или других объектов на веб-странице в CSS применяется свойство `position`.
+
 ```css
 position: relative | absolute | fixed:
-```
-
-```css
-position: relative:
-
-right: 10px
-left: 10px
-...
-```
-
-```css
-position: absolute:
-
-right: 10px
-left: 10px
-...
 ```
