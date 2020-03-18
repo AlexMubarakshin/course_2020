@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #e8e8f3;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 32px;
+}
+
+.section .section__title {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.section .section__content {
+  display: flex;
+}
+
+.palette-item {
+  height: 64px;
+  width: 64px;
+  margin: 32px;
+  border-radius: 8px;
+
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0) !important
+}
+
+
+.section .section__content .section__content_item:first-child {
+  margin: 32px 32px 32px 0;
+}
+
+
+.align-section .section__content {
+  align-items: center;
+}
+
+.justify-section .section__content {
+  justify-content: space-around;
+}
