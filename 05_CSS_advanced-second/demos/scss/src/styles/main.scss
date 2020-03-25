@@ -1,9 +1,14 @@
 @import './constants.scss';
+@import './breakpoints.scss';
 @import './reset.scss';
 @import './header.scss';
 @import './footer.scss';
 
 .container {
+  @include xs {
+    padding: 0 16px;
+  }
+
   max-width: 720px;
   margin: 16px auto;
 
@@ -21,6 +26,7 @@
 
     img {
       margin: 16px 0;
+      width: 100%;
     }
 
   }
