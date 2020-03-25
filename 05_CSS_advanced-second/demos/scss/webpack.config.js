@@ -9,7 +9,7 @@ module.exports = {
   mode,
   context: __dirname,
   entry: {
-    index: ['./src/styles/main.scss'],
+    index: ['./src/styles/main.scss']
   },
   module: {
     rules: [
@@ -46,7 +46,7 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['homepage'],
+      chunks: ['index'],
     }),
     {
       apply(compiler) {

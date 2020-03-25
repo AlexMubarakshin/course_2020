@@ -1,0 +1,28 @@
+@import './constants.scss';
+@import './reset.scss';
+@import './header.scss';
+@import './footer.scss';
+
+.container {
+  max-width: 720px;
+  margin: 16px auto;
+
+  section {
+    text-align: center;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 16px;
+    }
+
+    img {
+      margin: 16px 0;
+    }
+
+  }
+
+}
