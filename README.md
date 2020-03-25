@@ -8,6 +8,7 @@
 - [Второе занятие](./02_HTML_basics/Readme.md)
 - [Третье занятие](./03_CSS_basics/Readme.md)
 - [Четвертое занятие](./04_CSS_advanced/Readme.md)
+- [Пятое занятие](./05_CSS_advanced-second/Readme.md)
 
 ## Полезные ссылки
 
@@ -29,6 +30,7 @@
 
 - ✨[Слова, часто используемые в CSS-классах](https://github.com/yoksel/common-words)
 - ✨[Flexbox Froggy](https://flexboxfroggy.com/#ru) - Flexbox тренажер
+- ✨[Развёрнутое руководство по Sass/SCSS](https://tproger.ru/translations/complete-sass-guide/) - Статья про Sass/SCSS
 
 ### Инструменты
 
