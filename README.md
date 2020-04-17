@@ -9,6 +9,8 @@
 - [Третье занятие](./03_CSS_basics/Readme.md)
 - [Четвертое занятие](./04_CSS_advanced/Readme.md)
 - [Пятое занятие](./05_CSS_advanced-second/Readme.md)
+- [Шестое занятие](./06_JS_Basics/Readme.md)
+- [Седьмое занятие](./07_JS_Real_life/Readme.md)
 
 ## Полезные ссылки
 
