@@ -1,0 +1,83 @@
+Arguments: 
+  /Users/alex/.nvm/versions/node/v12.13.0/bin/node /usr/local/Cellar/yarn/1.19.2/libexec/bin/yarn.js
+
+PATH: 
+  /Users/alex/.nvm/versions/node/v12.13.0/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/alex/.nvm/versions/node/v12.13.0/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/go/bin:/usr/local/mongodb/bin:/usr/local/go/bin:/usr/local/mongodb/bin
+
+Yarn version: 
+  1.19.2
+
+Node version: 
+  12.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/alex/Documents/Projects/personal/course_2020/07_JS_Real_life/pract/builders/package.json: Unexpected token / in JSON at position 625
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.19.2/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.19.2/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.19.2/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "your-own-flow",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "watch": {
+      "validate-js": "./src",
+      "validate-css": {
+        "patterns": [
+          "src"
+        ],
+        "extensions": "css"
+      },
+      "validate-html": {
+        "patterns": [
+          "src"
+        ],
+        "extensions": "html",
+        "quiet": true,
+        "legacyWatch": true
+      }
+    },
+    "scripts": {
+      "server": "live-server ./src",
+      "start": "npm-run-all --parallel server watch",
+      "validate-css": "stylelint src/**/*.css",
+      "validate-html": "html-validate ./src",
+      "validate-js": "eslint --ext .js src/",
+      // "watch": "npm-watch",
+      "run-webpack": "webpack --mode production",
+      "build": "npm-run-all validate-html jshint stylelint run-webpack",
+      "build:dev": "webpack",
+      "build:production": "cross-env NODE_ENV=production webpack",
+      "watch": "webpack --watch"
+    },
+    "author": "Mubarakshin Alex & Kalagin Ivan",
+    "license": "ISC",
+    "devDependencies": {
+      "clean-webpack-plugin": "^3.0.0",
+      "eslint": "6.8.0",
+      "html-validate": "2.20.1",
+      "html-webpack-plugin": "^4.2.0",
+      "live-server": "1.2.1",
+      "mini-css-extract-plugin": "^0.9.0",
+      "npm-run-all": "4.1.5",
+      "npm-watch": "0.6.0",
+      "optimize-css-assets-webpack-plugin": "^5.0.3",
+      "stylelint": "13.3.2",
+      "stylelint-config-standard": "20.0.0",
+      "terser-webpack-plugin": "^2.3.5"
+    },
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

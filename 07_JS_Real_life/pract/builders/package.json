@@ -1,0 +1,52 @@
+{
+  "name": "your-own-flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watch": {
+    "validate-html": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "html",
+      "quiet": true,
+      "legacyWatch": true
+    }
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=production webpack --mode=production",
+    "build:dev": "webpack",
+    "validate-all": "npm-run-all validate-css validate-html validate-js",
+    "validate-css": "stylelint src/**/*.css",
+    "validate-html": "html-validate ./src",
+    "validate-js": "eslint --ext .js src/",
+    "watch": "webpack --watch"
+  },
+  "author": "Mubarakshin Alex & Kalagin Ivan",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "8.1.0",
+    "clean-webpack-plugin": "3.0.0",
+    "cross-env": "7.0.2",
+    "css-loader": "3.5.2",
+    "eslint": "6.8.0",
+    "eslint-loader": "4.0.0",
+    "file-loader": "6.0.0",
+    "html-validate": "2.20.1",
+    "html-validate-plugin": "1.0.0",
+    "html-webpack-plugin": "4.2.0",
+    "mini-css-extract-plugin": "0.9.0",
+    "npm-run-all": "4.1.5",
+    "npm-watch": "0.6.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "stylelint": "13.3.2",
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-webpack-plugin": "1.2.3",
+    "terser-webpack-plugin": "2.3.5",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  },
+  "dependencies": {}
+}
