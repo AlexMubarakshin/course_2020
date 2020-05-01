@@ -1,20 +1,11 @@
 {
-  "name": "your-own-flow",
+  "name": "notes",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "watch": {
-    "validate-html": {
-      "patterns": [
-        "src"
-      ],
-      "extensions": "html",
-      "quiet": true,
-      "legacyWatch": true
-    }
-  },
+  "author": "Alex Mubarakshin <muban96@mail.ru>",
+  "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --open --mode=development",
+    "start": "webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack --mode=production",
     "build:dev": "webpack",
     "validate-all": "npm-run-all validate-css validate-html validate-js",
@@ -23,8 +14,6 @@
     "validate-js": "eslint --ext .js src/",
     "watch": "webpack --watch"
   },
-  "author": "Mubarakshin Alex & Kalagin Ivan",
-  "license": "ISC",
   "devDependencies": {
     "babel-loader": "8.1.0",
     "clean-webpack-plugin": "3.0.0",
