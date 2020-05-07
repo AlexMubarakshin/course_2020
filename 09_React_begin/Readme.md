@@ -1,3 +1,3 @@
-# Браузерный JS
+# React JS
 
 - [Практика](./Practice.md)
