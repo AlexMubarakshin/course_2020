@@ -8,3 +8,8 @@
   <img src="./demo-screen.png" alt="Old internet"
        width="85%">
 </p>
+
+## Примечание
+
+- `index-old.js` - ванильный JS
+- `index.js` - JS с React'ом
