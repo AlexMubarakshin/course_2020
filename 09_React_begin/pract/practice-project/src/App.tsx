@@ -1,38 +1,14 @@
-function Header(props) {
-  return (
-    <header>
-      <input type="text" placeholder="Search..." onChange={props.onChange} />
-    </header>
-  );
-}
+import React from 'react';
 
-function Footer() {
-  return (
-    <footer>
-      <h4>
-        <a href="https://github.com/AlexMubarakshin" target="_blank">
-          Alex Mubarakshin
-        </a>
-      </h4>
-    </footer>
-  );
-}
+import Header from './components/elements/Header';
+import Footer from './components/elements/Footer';
+import CardItem from './components/shared/CardItem';
 
-function CardItem(props) {
-  return (
-    <div className="list__item">
-      <img
-        className="list__item_image"
-        src={props.image}
-        alt="meidtaion_image" />
-      <h3 className="list__item_title">{props.author}</h3>
-    </div>
-  );
-}
+type AppProps = {}
 
-class App extends React.Component {
+class App extends React.Component<AppProps> {
 
-  constructor(props) {
+  constructor(props: AppProps) {
     super(props);
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -60,11 +36,9 @@ class App extends React.Component {
     filter: ''
   }
 
-  handleInputChange(e) {
-    const inputValue = e.target.value;
-
+  handleInputChange({ target: { value } }: React.ChangeEvent<HTMLInputElement>) {
     this.setState({
-      filter: inputValue
+      filter: value
     });
   }
 
@@ -95,9 +69,6 @@ class App extends React.Component {
       </div>
     )
   }
-
 }
 
-const domContainer = document.querySelector('#root');
-ReactDOM.render(<App />, domContainer);
-
+export default App;
