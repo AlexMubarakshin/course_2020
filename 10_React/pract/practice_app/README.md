@@ -9,5 +9,5 @@
 $ npm i
 
 # Запуск
-$ yarn start
+$ npm start
 ```
