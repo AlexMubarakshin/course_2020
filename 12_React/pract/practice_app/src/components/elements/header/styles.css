@@ -1,0 +1,10 @@
+.app__header {
+  background-color: #52616b;
+  min-height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #1e2022;
+}
