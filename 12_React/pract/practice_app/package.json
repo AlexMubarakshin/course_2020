@@ -35,12 +35,14 @@
     "@types/react-dom": "16.9.8",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-router-dom": "^5.2.0",
+    "react-redux": "7.2.0",
+    "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
     "typescript": "3.9.2"
   },
   "devDependencies": {
+    "@types/react-redux": "7.1.9",
+    "@types/react-router-dom": "5.1.5",
     "@typescript-eslint/eslint-plugin": "2.33.0",
     "@typescript-eslint/parser": "2.33.0",
     "eslint-plugin-react": "7.20.0"
