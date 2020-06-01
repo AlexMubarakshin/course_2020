@@ -1,36 +1,31 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './styles.css';
 
 import Card from '../../elements/card';
 import { PicsumImage } from '../../../core/model/Picsum';
-import { API_URL } from '../../../config';
 
-const IMAGE_LIMIT = 15;
+import { loadImages, loadMoreImages, LoadImagesActionFunc, LoadMoreImagesFunc } from '../../../core/redux/images';
+import { Store } from '../../../core/redux/store';
 
-type HomeProps = {};
+type HomeContainerProps = {
+  loadImages: LoadImagesActionFunc;
+  loadMoreImages: LoadMoreImagesFunc;
 
-type HomeState = {
   images: PicsumImage[];
   page: number;
-
   isFetching: boolean;
-  isListEnded: boolean;
-}
+  isMoreFetching: boolean;
+};
 
-class Home extends React.Component<HomeProps, HomeState> {
 
-  state: HomeState = {
-    images: [],
-    page: 1,
-    isFetching: false,
-    isListEnded: false,
-  }
+class HomeContainer extends React.Component<HomeContainerProps> {
 
   componentDidMount(): void {
     window.addEventListener('scroll', this.handleScroll);
 
-    this.loadData();
+    this.props.loadImages();
   }
 
   componentWillUnmount(): void {
@@ -38,46 +33,20 @@ class Home extends React.Component<HomeProps, HomeState> {
   }
 
   handleScroll = (): void => {
+    const { isFetching, loadMoreImages } = this.props;
     const isBottomOfPage = window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight;
 
-    if (!isBottomOfPage || this.state.isFetching || this.state.isListEnded) return;
+    if (!isBottomOfPage || isFetching) return;
 
-    this.setState((prevState) => ({
-      page: prevState.page + 1
-    }), this.loadData);
-  }
-
-  loadData = (): void => {
-    this.setState({
-      isFetching: true,
-    }, async () => {
-      try {
-        const response = await fetch(`${API_URL}/v2/list?page=${this.state.page}&limit=${IMAGE_LIMIT}`);
-        const values = await response.json();
-
-        const isListEnded = values.length < IMAGE_LIMIT;
-
-        this.setState((prevState) => ({
-          images: prevState.images.concat(values),
-          isFetching: false,
-          isListEnded,
-        }));
-      } catch (err) {
-        console.error(err);
-
-        this.setState({
-          isFetching: false,
-        });
-      }
-    });
-
+    loadMoreImages();
   }
 
   render(): React.ReactElement {
+    const { images, isFetching, isMoreFetching } = this.props;
     return (
       <main className="app__main">
         {
-          this.state.images.map((image) => (
+          images.map((image) => (
             <Card
               key={image.id}
               src={image.download_url}
@@ -87,7 +56,7 @@ class Home extends React.Component<HomeProps, HomeState> {
         }
 
         {
-          this.state.isFetching && (
+          (isFetching || isMoreFetching) && (
             <h4>Loading...</h4>
           )
         }
@@ -96,4 +65,16 @@ class Home extends React.Component<HomeProps, HomeState> {
   }
 }
 
-export default Home;
+const mapStateToProps = (state: Store): any => ({
+  images: state.imagesReducer.images,
+  isFetching: state.imagesReducer.isFetching,
+  isMoreFetching: state.imagesReducer.isMoreFetching,
+  page: state.imagesReducer.page,
+});
+
+const mapDispatchToProps = {
+  loadImages,
+  loadMoreImages,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);

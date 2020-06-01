@@ -1,33 +1,38 @@
 import React from 'react';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import store from '../../../core/redux/store';
 
 import './styles.css';
 
 import Header from '../../elements/header';
 import Footer from '../../elements/footer';
 
-import Home from '../home';
+import HomeContainer from '../home';
 import ImageDetailsContainer from '../image-details';
-import NotFound from '../not-found';
+import NotFoundContainer from '../not-found';
 
 type AppProps = {};
 
-const App: React.FC<AppProps> = () => (
-  <div className="app">
-    <Header />
+const AppContainer: React.FC<AppProps> = () => (
+  <Provider store={store}>
+    <div className="app">
+      <Header />
 
-    <BrowserRouter>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/image/:id' component={ImageDetailsContainer} />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={HomeContainer} />
+          <Route path='/image/:id' component={ImageDetailsContainer} />
 
-        <Route component={NotFound} />
-      </Switch>
-    </BrowserRouter>
+          <Route component={NotFoundContainer} />
+        </Switch>
+      </BrowserRouter>
 
-    <Footer />
-  </div>
+      <Footer />
+    </div>
+  </Provider>
 );
 
-export default App;
+export default AppContainer;

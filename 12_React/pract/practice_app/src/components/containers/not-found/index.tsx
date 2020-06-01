@@ -1,5 +1,5 @@
 import React from 'react';
 
-const NotFound: React.FC = () => (<h1>Нет такой страницы 🙃</h1>);
+const NotFoundContainer: React.FC = () => (<h1>Нет такой страницы <span role="img" aria-label="">🙃</span></h1>);
 
-export default NotFound;
+export default NotFoundContainer;
