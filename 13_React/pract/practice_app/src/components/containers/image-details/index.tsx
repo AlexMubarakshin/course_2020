@@ -1,32 +1,37 @@
 import * as React from 'react';
-import { useParams } from 'react-router-dom';
-import { API_URL } from '../../../config';
-import { PicsumImage } from '../../../core/model/Picsum';
 import { connect } from 'react-redux';
+import { useParams } from 'react-router-dom';
+
+import { PicsumImage } from '../../../core/model/Picsum';
+import { Store } from '../../../core/redux/store';
+import { loadImage, LoadImageFunc } from '../../../core/redux/image';
 
 type Params = {
   id: string;
 }
 
-type ImageDetailsContainerProps = {};
+type ImageDetailsStateToProps = {
+  image?: PicsumImage;
+  isFetching?: boolean;
+}
 
-const ImageDetailsContainer: React.FC<ImageDetailsContainerProps> = () => {
+type ImageDetailsDispatchToProps = {
+  loadImage?: LoadImageFunc;
+}
+
+type ImageDetailsContainerProps = ImageDetailsDispatchToProps & ImageDetailsStateToProps;
+
+const ImageDetailsContainer: React.FC<ImageDetailsContainerProps> = ({ image, isFetching, loadImage }: ImageDetailsContainerProps) => {
   const { id } = useParams<Params>();
-  const [image, setImage] = React.useState<Partial<PicsumImage>>({});
 
   React.useEffect(() => {
-    (async (): Promise<void> => {
-      const response = await fetch(`${API_URL}/id/${id}/info`);
-      const responseImage = await response.json();
-
-      setImage(responseImage);
-    })();
-  }, [id]);
+    loadImage && loadImage(+id);
+  }, [id, loadImage]);
 
   return (
     <div>
       {
-        image ?
+        !isFetching && image ?
           (
             <>
               <img src={image.download_url} style={{ maxWidth: '100%' }} alt={image.author} />
@@ -40,14 +45,20 @@ const ImageDetailsContainer: React.FC<ImageDetailsContainerProps> = () => {
             <p>Loading...</p>
           )
       }
+
     </div>
   );
 };
 
-const mapStateToProps = () => ({
+const mapStateToProps = (state: Store): ImageDetailsStateToProps => ({
+  image: state.imageReducer.image,
+  isFetching: state.imageReducer.isFetching,
 });
 
-const mapDispatchToProps = () => ({
-});
+const mapDispatchToProps: ImageDetailsDispatchToProps = {
+  loadImage,
+};
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 export default connect(mapStateToProps, mapDispatchToProps)(ImageDetailsContainer);

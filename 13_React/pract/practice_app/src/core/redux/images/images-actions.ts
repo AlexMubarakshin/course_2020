@@ -31,7 +31,7 @@ export const loadImages: LoadImagesActionFunc = () => {
     } catch (err) {
       console.error(err);
 
-      dispatch({ type: IMAGES_ACTIONS.LOAD_IMAGES_SUCCESS });
+      dispatch({ type: IMAGES_ACTIONS.LOAD_IMAGES_FAILURE });
     }
   };
 };

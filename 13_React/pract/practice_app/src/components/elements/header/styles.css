@@ -8,3 +8,8 @@
   font-size: calc(10px + 2vmin);
   color: #1e2022;
 }
+
+.app__header_login {
+  color: white;
+  text-decoration: none;
+}
