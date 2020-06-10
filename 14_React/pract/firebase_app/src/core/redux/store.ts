@@ -16,7 +16,7 @@ import {
 import { PersistPartial } from 'redux-persist/es/persistReducer';
 import Config from '../../config';
 
-type AppStore = {
+export type AppStore = {
   firebase: FirebaseReducer.Reducer;
   firestore: any;
 }

@@ -12,7 +12,6 @@ const Config: AppConfig = {
     databaseURL: 'https://<OTHER_DATABASE_NAME>.firebaseio.com',
     storageBucket: '<OTHER_STORAGE_BUCKET>.appspot.com',
   }
-
 };
 
 
