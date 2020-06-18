@@ -17,7 +17,10 @@ import HomeContainer from '../home';
 
 import NotFoundContainer from '../not-found';
 import LoginContainer from '../login';
+import RegisterContainer from '../register';
+
 import initStore from '../../../core/redux/store';
+import PrivateRoute from '../../elements/router/private-router';
 
 const configuratedStore = initStore();
 
@@ -36,6 +39,10 @@ const AppContainer: React.FC<AppProps> = () => (
               <Switch>
                 <Route exact path='/' component={HomeContainer} />
                 <Route exact path='/login' component={LoginContainer} />
+                <Route exact path='/register' component={RegisterContainer} />
+                <PrivateRoute exact path='/profile'>
+                  <h1> Profile</h1>
+                </PrivateRoute>
 
                 <Route component={NotFoundContainer} />
               </Switch>

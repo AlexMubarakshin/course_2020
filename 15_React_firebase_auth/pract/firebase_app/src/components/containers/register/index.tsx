@@ -6,29 +6,25 @@ import { VALIDATIONS_MESSAGES } from '../../../constants';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Button from '@material-ui/core/Button';
 import { Link, useHistory } from 'react-router-dom';
-
-import { connect } from 'react-redux';
 import { useFirebase } from 'react-redux-firebase';
 
-type LoginValues = {
+type RegisterValues = {
   email: string;
   password: string;
 }
 
-const INITIAL_VALUES: LoginValues = {
+const INITIAL_VALUES: RegisterValues = {
   email: '',
   password: ''
 };
 
-function validate(values: LoginValues): Partial<LoginValues> {
-  const errors: Partial<LoginValues> = {};
+function validate(values: RegisterValues): Partial<RegisterValues> {
+  const errors: Partial<RegisterValues> = {};
 
   if (!values.email) {
     errors.email = VALIDATIONS_MESSAGES.REQUIRED;
   }
-  // else if (
-  //   VALIDATION_REGEX.EMAIL_REGEX.test(values.email)
-  // ) {
+  // else if (!isRightFormat) {
   //   errors.email = VALIDATIONS_MESSAGES.EMAIL_WRONG_FORMAT;
   // }
 
@@ -39,14 +35,16 @@ function validate(values: LoginValues): Partial<LoginValues> {
   return errors;
 }
 
-const LoginContainer: React.FC = () => {
+type RegisterContainerProps = {}
+
+const RegisterContainer: React.FC<RegisterContainerProps> = () => {
   const firebase = useFirebase();
 
   const history = useHistory();
 
-  const onSubmit = React.useCallback(async ({ email, password }: LoginValues): Promise<void> => {
+  const onSubmit = React.useCallback(async ({ email, password }: RegisterValues): Promise<void> => {
     try {
-      await firebase.login({ email, password });
+      await firebase.createUser({ email, password });
       history.push('/');
     } catch (err) {
       console.error(err);
@@ -55,7 +53,7 @@ const LoginContainer: React.FC = () => {
 
   return (
     <div>
-      <h1>Вход 🙃</h1>
+      <h1>Регистрация 🙃</h1>
       <Formik
         initialValues={INITIAL_VALUES}
         validate={validate}
@@ -100,18 +98,12 @@ const LoginContainer: React.FC = () => {
         }
       </Formik>
 
-      <Link to='register'>
-        Регистрация
+      <Link to='login'>
+        Уже есть аккаунт
       </Link>
     </div>
   );
 };
 
-const enhance = connect(
-  // Map redux state to component props
-  (connectProps) => ({
-    connectProps
-  })
-);
 
-export default enhance(LoginContainer);
+export default RegisterContainer;
