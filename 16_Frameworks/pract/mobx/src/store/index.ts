@@ -1,5 +1,11 @@
-import ExampleStore from './ExampleStore';
+import FavoriteStore from './FavoriteStore';
 
-export const stores = {
-  example: new ExampleStore(),
+export type Store = {
+  favorites: FavoriteStore;
+};
+
+export const createStore = (): Store => {
+  return {
+    favorites: new FavoriteStore(),
+  };
 };
